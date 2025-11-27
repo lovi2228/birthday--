@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #050816, #0b0b23);
+  color: #fff;
+  overflow: hidden;
+  transition: 1s;
+}
+
+body.lights-on {
+  background: radial-gradient(circle, #ff9a9e, #fad0c4, #f6d365);
+  color: #111;
+}
+
+body.decorated {
+  background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title, .subtitle {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: 0.8s;
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.buttons {
+  margin: 15px;
+}
+
+button {
+  margin: 6px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #ffadc6;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.stage {
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Lights */
+.lights-strip {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.lights-on .lights-strip {
+  opacity: 1;
+}
+
+.bulb {
+  width: 14px;
+  height: 20px;
+  border-radius: 10px;
+  background: #555;
+}
+
+.lights-on .bulb {
+  background: #ffe066;
+  box-shadow: 0 0 10px yellow;
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  width: 35px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  bottom: -70px;
+  animation: float 8s infinite linear;
+  opacity: 0;
+}
+
+.decorated .balloon {
+  opacity: 1;
+}
+
+@keyframes float {
+  0% { bottom: -70px; }
+  100% { bottom: 110%; }
+}
+
+/* Photos */
+.photos-section {
+  display: none;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.visible-flex {
+  display: block;
+}
+
+.animate-in {
+  opacity: 1 !important;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+/* Birthday Message */
+.birthday-message {
+  display: none;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.birthday-message.show {
+  display: block;
+  opacity: 1;
+}
