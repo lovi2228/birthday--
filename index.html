@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Rahul! 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title" id="title">Happy Birthday, <span id="friendName">Rahul</span>! 🎂</h1>
+    <p class="subtitle" id="subtitle">Wishing you a day filled with love and laughter 💛</p>
+
+    <div class="buttons">
+      <button id="startBtn">Start Celebration</button>
+      <button id="lightsBtn" disabled>Turn the Lights On ✨</button>
+      <button id="decorBtn" disabled>Decorate the Party 🎈</button>
+      <button id="messageBtn" disabled>Show Birthday Message 💌</button>
+    </div>
+
+    <p class="music-warning" id="musicNote" style="display: none;">
+      🎵 If music didn’t start, tap “Start Celebration” again.
+    </p>
+
+    <div class="stage">
+      <!-- Lights -->
+      <div class="lights-strip" id="lightsStrip">
+        <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
+        <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
+      </div>
+
+      <!-- Balloons -->
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+
+      <!-- Photos -->
+      <div class="photos-section" id="photosSection">
+        <div class="photos-title">Memories with <span id="friendName2">Rahul</span> 🎉</div>
+        <div class="photo-grid">
+          <div class="photo-card">
+            <img src="images/friend-cake.jpg" alt="Photo 1">
+            <span class="tag">Cake Time 🎂</span>
+          </div>
+          <div class="photo-card">
+            <img src="images/friend-1.jpg" alt="Photo 2">
+            <span class="tag">Your smile ✨</span>
+          </div>
+          <div class="photo-card">
+            <img src="images/friend-2.jpg" alt="Photo 3">
+            <span class="tag">Memories 💫</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="birthday-message" id="birthdayMessage">
+        <h2>Dear <span id="friendName3">Rahul</span>, 🎉</h2>
+        <p>
+          Happiest birthday to one of the most amazing people in my life. Thank you for all the laughs
+          and wonderful memories we've shared.
+        </p>
+        <p>
+          May this year bring you endless joy and success. You deserve the best — today and always! 🥳
+        </p>
+        <p style="margin-top:10px;font-weight:600;">
+          With love,<br>Your Friend ❤️
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="music/happy.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
